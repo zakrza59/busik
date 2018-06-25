@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>ReasonApps</title>
+  <link href="./images/logo/favicon.png" rel="icon" sizes="32x32" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed|Nunito" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">
+      <img src="./images/logo/logo-light.png" height="30px"  class="d-inline-block align-top">
+    </a>
+    <button class="navbar-toggler" id="hamburger" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Strona główna</a>
+        <a class="nav-item nav-link" href="#">Szukaj połączenia</a>
+        <a class="nav-item nav-link" href="#">FAQ</a>
+        <a class="nav-item nav-link" href="#">O nas</a>
+        <a class="nav-item nav-link" href="#">Kontakt</a>
+        <div class="nav-divider d-none d-lg-block"></div>
+        <a class="nav-item nav-link d-none d-lg-block" href="#"><img src="./images/lang/pl.png">PL</a>
+        <a class="nav-item nav-link d-none d-lg-block" href="#"><img src="./images/lang/en.png">EN</a>
+        <a class="nav-item nav-link d-none d-lg-block" href="#"><img src="./images/lang/de.png">DE</a>
+      </div>
+    </div>
+  </nav>
+  <!-- HERO -->
+  <div class="jumbotron jumbotron-fluid">
+    <h1>Podróżuj razem z nami <br> po całej Europie!</h1>
+    <button id="find-button-mobile" class="d-flex d-lg-none" data-toggle="modal" data-target="#modal-mobile">
+      <p><img src="./images/search/search-icon.png">Szukaj połączenia</p>
+    </button>
+    <div class="row position-relative d-none d-lg-flex" id="search-input">
+      <div id="box-input-1">
+        <p>Z:</p>
+        <input class="input-long">
+      </div>
+      <img src="./images/search/arrows-icon.png" id="arrows" height="14">
+      <div id="box-input-2">
+        <p>Do:</p>
+        <input class="input-long">
+      </div>
+      <div>
+        <p>Odjazd:</p>
+        <input class=input-3>
+      </div>
+      <img src="./images/search/calendar-icon.png" id="calendar" height="13">
+      <div class="input-divider"></div>
+      <div>
+        <a href="#"><img src="./images/search/plus-icon.png">Dodaj powrót</a>
+      </div>        
+      <div id="people">
+        <p>Ilość osób:</p>
+        <input class=input-4>
+      </div>
+      <img src="./images/search/adjust-icon.png" id="adjust" height="13">
+      <div class="input-divider"></div>
+      <button id="find-button">
+        <p><img src="./images/search/search-icon.png">Szukaj połączenia</p>
+      </button>
+    </div>
+  </div>
+  <!-- MODAL -->
+  <div class="modal fade" id="modal-mobile" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Szukaj połączenia</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">            
+          <div class="col-12">
+            <p>Z:</p>
+            <input class="input-long">
+          </div> 
+          <img src="./images/search/arrows-icon.png" id="arrows-mobile" height="14">  
+          <div class="col-12">
+            <p>Do:</p>
+            <input class="input-long">
+          </div>    
+          <div class="col-12">
+            <p>Odjazd:</p>
+            <input class=input-3>
+          </div>
+          <img src="./images/search/calendar-icon.png" id="calendar-mobile" height="13">    
+          <div class="input-divider-mobile1"></div>
+          <div class="col-12">
+            <a href="#" id="another"><img src="./images/search/plus-icon.png">Dodaj powrót</a>
+          </div>      
+          <div class="col-12">
+            <p>Ilość osób:</p>
+            <input class=input-4>
+          </div>      
+          <img src="./images/search/adjust-icon.png" id="adjust-mobile" height="13">
+          <div class="input-divider-mobile2"></div>
+        </div>
+        <div class="modal-footer">
+          <button class="btn">SZUKAJ</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FEATURES -->
+  <div class="container-fluid" id="features">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-1">
+          <img src="./images/features/1.png">
+          <p>Potwierdzenie<br>rezerwacji w 5 minut</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-2">
+          <img src="./images/features/2.png">
+          <p>Jeździmy 7 dni w<br>tygodniu</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-3">
+          <img src="./images/features/3.png">
+          <p>Bezpieczne płatności<br>online</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-4">
+          <img src="./images/features/4.png">
+          <p>Co 6 przejazd gratis!</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-5">
+          <img src="./images/features/5.png">
+          <p>Darmowe WiFi</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-6">
+          <img src="./images/features/6.png">
+          <p>Nowa i sprawdzona<br>flota</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-7">
+          <img src="./images/features/7.png">
+          <p>Darmowa woda</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-8">
+          <img src="./images/features/8.png">
+          <p>Przypomnienia SMS</p>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-lg-4 feature-box">
+        <div class="row justify-content-center align-items-center feature" id="features-content-9">
+          <img src="./images/features/9.png">
+          <p>Gwarancja<br>zadowolenia</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ABOUT -->
+  <div class="container-fluid" id="about">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+        <h4><b><span>Odkrywaj Europę</span> korzystając z<br>naszych tanich biletów<br>autobusowych</b></h4>
+        <p>Nam et sollicitudin erat. Phasellus urna nibh, elementum in enim quis,<br>feugiat sollicitudin felis. </p>
+        <p>Ut tristique rutrum viverra. Nullam vel orci aliquet, semper ex quis,<br>bibendum erat. Integer porta, lectus nec rutrum pharetra, massa tellus<br>sodales lacus, non pellentesque dolor quam at erat.</p>
+      </div>
+      <div class="col-12 col-md-6 col-lg-5 col-xl-4">
+        <h4><b><span>Wyjazdy weekendowe</span> i <br> wakacyjne w PolskiBusik.eu</b></h4>
+        <p>Nam et sollicitudin erat. Phasellus urna nibh, elementum in enim quis,<br>feugiat sollicitudin felis. </p>
+        <p>Ut tristique rutrum viverra. Nullam vel orci aliquet, semper ex quis,<br>bibendum erat. Integer porta, lectus nec rutrum pharetra, massa tellus<br>sodales lacus, non pellentesque dolor quam at erat.</p>
+      </div>
+    </div>
+  </div>
+  <!-- FOOTER -->
+  <div class="container" id="footer">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-xl-3 order-xl-2 order-sm-1">
+        <p><b>Firma</b></p>
+        <ul>
+          <a href="#"><li>FAQ</li></a>
+          <a href="#"><li>Newsletter</li></a>
+          <a href="#"><li>Vouchery</li></a>
+          <a href="#"><li>Aplikacje</li></a>
+          <a href="#"><li>Prawa pasażerów</li></a>
+          <a href="#"><li>Anulowanie i zmiana biletu</li></a>
+          <a href="#"><li>Kontakt</li></a>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 order-xl-3 order-sm-2">
+        <p><b>Kierunki</b></p>
+        <ul>
+          <a href="#"><li>Autobusy Berlin</li></a>
+          <a href="#"><li>Autobusy Warszawa</li></a>
+          <a href="#"><li>Autobusy Szczecin</li></a>
+          <a href="#"><li>Autobusy Londyn</li></a>
+          <a href="#"><li>Autobusy Rzym </li></a>
+          <a href="#"><li>Autobusy Paryż</li></a>
+          <a href="#"><li>Autobusy Amsterdam</li></a>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 order-xl-4 order-sm-4">
+        <p><b>Połączenia autobusowe</b></p>
+        <ul>
+          <a href="#"><li>Autobusy Berlin - Szczecin</li></a>
+          <a href="#"><li>Autobusy Praga - Wrocław</li></a>
+          <a href="#"><li>Autobusy Wiedeń - Warszawa</li></a>
+          <a href="#"><li>Autobusy Berlin - Warszawa</li></a>
+          <a href="#"><li>Autobusy Kraków - Lwów</li></a>
+          <a href="#"><li>Autobusy Warszawa - Wrocław</li></a>
+          <a href="#"><li>Autobusy Wiedeń - Kraków</li></a>
+        </ul>
+      </div>
+      <div class="col-12 col-sm-6 col-xl-3 order-xl-1 order-sm-3" id="social-box">
+        <img src="./images/logo/logo-dark.png">
+        <p id="find-us">Znajdź nas na...</p>
+        <div class="row" id="social">
+          <img src="./images/social/fb.png">
+          <img src="./images/social/tw.png">
+          <img src="./images/social/in.png">
+        </div>
+        <hr>
+        <p id="copyright">Copyright PolskiBusik.eu 2018&#9400; <br>All right reserved</p>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
